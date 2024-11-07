@@ -15,13 +15,13 @@ interface User {
 
     fun deregister(): User
 
-    data class Profile(
-        val name: String,
-        val gender: Gender,
-        val address: String,
-        val phone: String,
-        val birthday: LocalDate,
-    ) {
+    interface Profile {
+        val name: String
+        val gender: Gender
+        val address: String
+        val phone: String
+        val birthday: LocalDate
+
         enum class Gender {
             MALE,
             FEMALE,
@@ -55,3 +55,11 @@ abstract class AbstractUser : User {
         return this
     }
 }
+
+data class Profile(
+    override val name: String,
+    override val gender: User.Profile.Gender,
+    override val address: String,
+    override val phone: String,
+    override val birthday: LocalDate
+): User.Profile

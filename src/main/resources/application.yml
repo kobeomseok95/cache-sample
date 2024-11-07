@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: cache
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/cache
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+    show-sql: true
