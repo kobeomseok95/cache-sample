@@ -14,10 +14,10 @@ internal class UserQueryService(
     private val queryUser: QueryUser,
 ) : FindUser {
     override fun findById(id: UUID): User? {
-        return queryUser.findById(id) ?: throw IllegalArgumentException("User not found")
+        return queryUser.findById(id)
     }
 
     override fun findByEmail(email: String): User? {
-        return queryUser.findByEmail(email) ?: throw IllegalArgumentException("User not found")
+        return queryUser.findByEmail(email)
     }
 }
