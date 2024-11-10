@@ -4,6 +4,8 @@ import com.example.cache.domain.user.model.AbstractUser
 import com.example.cache.domain.user.model.Profile
 import com.example.cache.domain.user.model.User
 import jakarta.persistence.Entity
+import jakarta.persistence.EnumType
+import jakarta.persistence.Enumerated
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
@@ -51,6 +53,7 @@ class ProfileEntity(
     val id: UUID = UUID.randomUUID(),
     val userId: UUID,
     override var name: String,
+    @Enumerated(EnumType.STRING)
     override var gender: User.Profile.Gender,
     override var address: String,
     override var phone: String,
