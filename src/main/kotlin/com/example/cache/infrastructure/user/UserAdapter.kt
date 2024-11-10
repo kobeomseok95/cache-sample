@@ -1,10 +1,14 @@
-package com.example.cache.infrastructure.jpa.user
+package com.example.cache.infrastructure.user
 
 import com.example.cache.domain.user.infrastructure.CreateUser
 import com.example.cache.domain.user.infrastructure.QueryUser
 import com.example.cache.domain.user.infrastructure.SaveUser
 import com.example.cache.domain.user.model.User
 import com.example.cache.domain.user.model.UserCommand
+import com.example.cache.infrastructure.jpa.user.ProfileEntity
+import com.example.cache.infrastructure.jpa.user.ProfileJpaRepository
+import com.example.cache.infrastructure.jpa.user.UserEntity
+import com.example.cache.infrastructure.jpa.user.UserJpaRepository
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Repository
 import java.util.UUID
